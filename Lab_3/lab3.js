@@ -38,3 +38,30 @@ var arr = ["HTML", "JavaScript", "CSS"];
 var arr = [1, 2, 3, 4, 5];
     arr.sort(rundomSort);
     console.log( arr ); // елементи у випадковому порядку, наприклад [3,5,1,2,4]
+
+var vasya = { name: "Вася", age: 23 };
+var masha = { name: "Маша", age: 18 };
+var vovochka = { name: "Вовочка", age: 6 };
+
+var people = [ vasya , masha , vovochka ];
+
+sortBYAge(people);
+// тепер people: [vovochka, masha, vasya]
+
+console.log(people[0].age) // 6
+
+var list = { value: 1 };
+    list.next = { value: 2 };
+    list.next.next = { value: 3 };
+    list.next.next.next = { value: 4 };
+
+printList(list)
+printListRec(list)
+printReverseListRec(list)
+printReverseList(list)
+
+var strings = ["C++", "C#", "C++", "С#",
+"C", "C++", "JavaScript", "C++", "JavaScript"
+];
+
+console.log( unique(strings) ); // C++, C#, C, JavaScript

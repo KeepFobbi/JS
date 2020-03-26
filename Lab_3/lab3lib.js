@@ -23,7 +23,7 @@ function camelize(str) {
 
 function removeClass(obj, cls){
     var arr = obj.className ? obj.className.split(" "):[];
-    //Ищем в массиве нужный нам класс. Если находим его, то удаляем.
+
     for(var i=0;i<arr.length;i++){
         if(arr[i] == cls){
             arr.splice(i,1);
@@ -53,6 +53,61 @@ function arraySort(arr){
     return rezArr.sort()
 }
 
-function rundomSort(){
+function rundomSort(){          // 7
     return Math.random() - 0.5
+}
+
+function sortBYAge(arr){
+    arr.sort((a, b) => a.age > b.age ? 1 : -1);
+}
+
+function printList(list){
+    let temp = list
+
+    while(temp){
+        console.log(temp.value)
+        temp = temp.next
+    }
+}
+
+function printListRec(list){
+    console.log(list.value)
+    
+    if (list.next) {
+        printListRec(list.next)
+    }
+}
+
+function printReverseListRec(list){    
+    if (list.next) {
+        printReverseListRec(list.next)
+    }
+
+    console.log(list.value)
+}
+
+function printReverseList(list){
+    let arr = [];
+    let tmp = list;
+
+    while (tmp) {
+        arr.push(tmp.value);
+        tmp = tmp.next;
+    }
+
+    for (let i = arr.length - 1; i >= 0; i--) {
+        console.log( arr[i] );
+  }
+}
+
+function unique(arr){
+    var buff = []
+    
+    for(let val of arr){
+        if (!buff.includes(val)) {
+            buff.push(val)
+        }
+    }
+
+    return buff
 }
