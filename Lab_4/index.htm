@@ -43,10 +43,83 @@
                     Виведення дати N днів назад
                 </td>
                 <td>
-                    <input type="number" id="daysAgo"/>
+                    <input type="number" id="daysAgo" placeholder="Days Ago">
                     <button onclick="dayNAgo(new Date())">Виконати</button>
                 </td>
                 <td id="task_3"></td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Завдання №4.</b>
+                Визначає останній день місяця.
+                </td>
+                <td>
+                    <button onclick="getLastDayOfMonthYear(2013, 1)">Виконати</button>
+                </td>
+                <td id="task_4"></td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Завдання №5.</b>
+                    Повертає об’єкт з двома полями
+                </td>
+                <td>
+                    <button onclick="getSecondsTodayAnTomorrow()">Виконати</button>
+                </td>
+                <td id="task_5"></td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Завдання №6.</b>
+                    Виведення заданої дати у вигляді рядка форматі ДД.ММ.РРРР
+                </td>
+                <td>
+                    <button onclick="formatDay(new Date(2014, 0, 30))">Виконати</button>
+                </td>
+                <td id="task_6"></td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Завдання №7.</b>
+                    Пошук різниці між двома датами
+                </td>
+                <td>
+                    <button onclick="differenceDates(new Date(2000, 06, 24), new Date(2000, 07, 24))">Виконати</button>
+                </td>
+                <td id="task_7"></td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Завдання №8.</b>
+                    Функція formatDate(date), яка форматує дату date
+                </td>
+                <td>
+                    <button onclick="formatDate(new Date(new Date - 5 * 60 * 1000))">Виконати</button>
+                </td>
+                <td id="task_8"></td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Завдання №9.</b>
+                    dd [будь-який символ] mm [будь-який символ] yyyy
+                </td>
+                <td>
+                    <input type="text" id="Date">
+                    <button onclick="knowDate()">Виконати</button>
+                </td>
+                <td id="task_9"></td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Завдання №10.</b>
+                    Реалізуйте виведення дати на вказаній мові (мова вказується 2-х значним кодом, наприклад: ru, uk, en) у форматі:
+                    неділя, 12 березня 2017 нашої ери, 15:05:00
+                </td>
+                <td>
+                    <input type="text" id="lang">
+                    <button onclick="langDate(new Date())">Виконати</button>
+                </td>
+                <td id="task_10"></td>
             </tr>
         </table>
     </body>
