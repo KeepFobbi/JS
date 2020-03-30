@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>lab4</title>
+        <script src="lab4lib.js"></script>
+    </head>
+    <body>
+        <script src="lab4.js"></script>
+        <table border="1">
+            <tr style="background: gray">
+                <td>
+                    <b>Завдання</b>
+                </td>
+                <td></td>
+                <td>
+                    <b>Результат</b>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Завдання №1.</b>
+                    Виведення поточної дати та часу
+                </td>
+                <td>
+                    <button onclick="printDateTime()">Виконати</button>
+                </td>
+                <td id="task_1"></td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Завдання №2.</b>
+                    Виведення дня тижня
+                </td>
+                <td>
+                    <button onclick="printDay(new Date(2020, 3, 4))">Виконати</button>
+                </td>
+                <td id="task_2"></td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Завдання №3.</b>
+                    Виведення дати N днів назад
+                </td>
+                <td>
+                    <input type="number" id="daysAgo"/>
+                    <button onclick="dayNAgo(new Date())">Виконати</button>
+                </td>
+                <td id="task_3"></td>
+            </tr>
+        </table>
+    </body>
+</html>
