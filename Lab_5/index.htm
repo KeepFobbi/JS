@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>lab5</title>   
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="main">
+            <div class="field">
+                <label class="labelForFirst" for="F">Температура за Фаренгейтом</label>
+                <input type="number" id="F">
+            </div>
+            <div class="field">
+                <label class="labelForFirst" for="C">Температура за Цельсієм</label>
+                <input type="number" id="C">
+            </div>
+            <div>
+                <hr>
+                <p id="score"></p>
+                <button onclick="nextTask()">Наступне завдання</button>
+                <div class="taskMultiplication">
+                    <label for="answer" id="question">a * b = </label>
+                    <input type="number" id="answer">
+                    <button onclick="checkAnswer()">Перевірити</button>
+                    <p id="rightAnswer"></p>
+                </div>
+                
+            </div>
+        </div>
+        <script src="lab5.js"></script>
+    </body>
+</html>

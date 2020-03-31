@@ -1,0 +1,18 @@
+.field{
+    clear: both;
+    text-align: right;
+    line-height: 25px;
+}
+
+.labelForFirst{
+    float: left;
+    padding-right: 10px;
+}
+
+.main{
+    float: left;
+}
+
+.taskMultiplication{
+    padding-top: 10px;
+}
