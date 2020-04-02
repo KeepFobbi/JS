@@ -6,6 +6,7 @@
         <link href="style.css" rel="stylesheet">
     </head>
     <body>
+        <!-- Task 1 -->
         <div class="main">
             <div class="field">
                 <label class="labelForFirst" for="F">Температура за Фаренгейтом</label>
@@ -15,19 +16,49 @@
                 <label class="labelForFirst" for="C">Температура за Цельсієм</label>
                 <input type="number" id="C">
             </div>
+            <!-- Task 2 -->
             <div>
                 <hr>
                 <p id="score"></p>
                 <button onclick="nextTask()">Наступне завдання</button>
+
                 <div class="taskMultiplication">
                     <label for="answer" id="question">a * b = </label>
                     <input type="number" id="answer">
                     <button onclick="checkAnswer()">Перевірити</button>
                     <p id="rightAnswer"></p>
                 </div>
+                <!-- Task 3 -->
+                <div>
+                    <hr>
+                    <p id="RadioScore"></p>
+                    <button onclick="nextRadioTask()">Наступне завдання</button>
+                    
+                    <div class="taskMultiplication">
+                        <p id="RadioQuestion">Какое у вас состояние разума?</p>
+
+                            <p><input name="dzen" type="radio" id="RadioAnswer0" onclick="checkRadioAnswer(this)" value="1"> 
+                                <label for="RadioAnswer0" id="answer0">дзен</label></p>
+
+                            <p><input name="dzen" type="radio" id="RadioAnswer1" onclick="checkRadioAnswer(this)" value="2"> 
+                                <label for="RadioAnswer1" id="answer1">дзен dzen</label></p>
+
+                            <p><input name="dzen" type="radio" id="RadioAnswer2" onclick="checkRadioAnswer(this)" value="3"> 
+                                <label for="RadioAnswer2" id="answer2">Не дзен</label></p>
+
+                            <p><input name="dzen" type="radio" id="RadioAnswer3" onclick="checkRadioAnswer(this)" value="4"> 
+                                <label for="RadioAnswer3" id="answer3">Полный дзен</label></p>
+
+                        <p id="rightRadioAnswer"></p>
+                    </div>
+                </div>
+                <!-- Task 4 -->
+                <hr>
                 
+                <!-- Task 5 -->
             </div>
         </div>
+
         <script src="lab5.js"></script>
     </body>
 </html>
