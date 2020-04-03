@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     nextTask();
     nextRadioTask();
+    initPhotoRotator('rotator', imagesArray);
 })
 
 F.oninput = function(){ C.value = (5 / 9 * (F.value - 32)).toFixed(1) }
@@ -80,4 +81,20 @@ function checkRadioAnswer(selRadio){
         `Загальний рахунок ${(RadioScore / RadioCount * 100).toFixed(0)}% 
         (${RadioScore} правильних відповідей з ${RadioCount})`
         nextRadioTask()
+}
+
+var imagesArray = [
+    {path: 'img/1.jpg',
+    title: 'Гори, красвий захід сонця',
+    description: 'FullHD 1080p 1920x1080'},
+    {path: 'img/2.jpg',
+    title: 'Заплутана домівка, готель біля річки',
+    description: 'FullHD 1080p 1920x1080'},
+    {path: 'img/3.jpg',
+    title: 'Дорога додому, золота осінь',
+    description: 'FullHD 1080p 1920x1080'}
+]
+
+function initPhotoRotator(divId, imgArr){
+    
 }
