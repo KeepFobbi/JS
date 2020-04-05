@@ -16,3 +16,32 @@
 .taskMultiplication{
     padding-top: 10px;
 }
+
+.block {
+    border: 2px solid gray;
+    height: 70px;
+    width: 160px;
+    padding: 5px;
+}
+
+.innerBlock {
+    height: 60px;
+    width: 30px;
+    float: left;
+    padding: 5px;
+}
+
+.span {
+    width: 10px;
+    height: 10px;
+    display: block;
+    float: left;
+}
+
+.bgWhite {
+    background-color: #fff;
+}
+
+.bgRed {
+    background-color: red;
+}
