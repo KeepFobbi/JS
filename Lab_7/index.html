@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>TETRIS</title>
+    <meta charset="UTF-8">
+
+    <style>
+        .button {
+            border: 1px solid black;
+            padding: 15px;
+            border-radius:10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+    </style>
+    <script src="lab7.js"></script>
+</head>
+<body onload="start()" onkeydown="handleKey(event)">
+<button onclick="start(true)">reset</button>
+<br>
+<span style="text-align: center" id="status">playing</span>  | score = <span id="score">0</span><span id="dscore"></span>
+<br>
+<canvas width="200" height="440" id="canvas"></canvas>
+<div style="position: relative">
+    <p> Упраление</p>
+    <p> перемещать срелками влево и вправо</p>
+    <p> стрелка вниз ускоряет падение</p>
+    <p> стрелка вверх поворот фигуры</p>
+    <p> пробел,фигура падает</p>
+    <p> ескейп-пауза </p>
+</div>
+</body>
+</html>

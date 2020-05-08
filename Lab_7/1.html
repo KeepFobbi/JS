@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script>var animal = { jumps: null };
+var rabbit = { jumps: true };
+rabbit.__proto__ = animal;
+alert( rabbit.jumps ); // true
+delete( rabbit.jumps);
+alert( rabbit.jumps ); // null
+delete (animal.jumps);
+alert( rabbit.jumps ); // undefined
+
+var animals = { eat: function() { this.full = true; } };
+var rabbits = { __proto__: animals };
+rabbits.eat();
+
+var head = {glasses: 1};
+
+var table = {
+    pen: 3,
+    __proto__: head
+};
+
+var bed = {
+    sheet: 1,
+    pillow: 2,
+    __proto__: table
+};
+
+var pockets = {
+    money: 2000,
+    __proto__: bed
+};
+alert( pockets.pen ); // 3
+alert( bed.glasses ); // 1
+alert( table.money ); // undefined
+
+function CoffeeMachine(power) {
+    this.power = power;
+    this._waterAmount = 0;
+}
+CoffeeMachine.prototype.WATER_HEAT_CAPACITY = 4200;
+CoffeeMachine.prototype._getTimeToBoil = function() {
+    return this._waterAmount * this.WATER_HEAT_CAPACITY * 80 / this.power;
+}
+CoffeeMachine.prototype.run = function() {
+    setTimeout(function() {
+        alert( 'Coffee`s on!' );
+    }, this._getTimeToBoil());
+};
+
+CoffeeMachine.prototype.setWaterAmount = function(amount) {
+    this._waterAmount = amount;
+};
+
+var coffeeMachine = new CoffeeMachine(10000);
+coffeeMachine.setWaterAmount(50);
+coffeeMachine.run();
+
+</script>
+<body>
+
+</body>
+</html>
