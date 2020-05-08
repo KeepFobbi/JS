@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en" manifest="manifest.manifest">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Main</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+    <label>A:<input type="number" id = 'from'></label>
+    <label>B:<input type="number" id = 'to'></label>
+    <input type="button" value="Start" id = 'startB'>
+    <input type="button" value="Stop" id = 'stopB'><br>
+     <textarea id='text_res'></textarea>
+
+    <br>
+    <span id = 'status'></span>
+    <div id="mapSurface"></div>
+
+    <script>
+        let latMaps;
+        let lngMaps;
+        navigator.geolocation.getCurrentPosition(
+            function(position) {
+                latMaps = +position.coords.latitude;
+                lngMaps = +position.coords.longitude;
+                alert('Последний раз вас засекали здесь: ' +
+                    position.coords.latitude + ", " + position.coords.longitude);
+            }
+        );
+
+
+        function initMap() {
+
+            var uluru = {lat:latMaps,lng:lngMaps};
+
+            var map = new google.maps.Map(document.getElementById('mapSurface'), {
+                zoom:4,
+                center: uluru
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+        }
+    </script>
+    <script async defer src="https://www.google.com/maps/api/js?key=AIzaSyBQU64npT9j0rFskcxwZSYIxpGa4XhHC8w&callback=initMap">
+    </script>
+    <script src="script.js"></script>
+
+    </body>
+</html>
