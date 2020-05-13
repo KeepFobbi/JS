@@ -1,0 +1,28 @@
+h1, h2{
+    font-family: "Times New Roman", fantasy;
+}
+
+h1{
+    font-size: 6em;
+}
+
+img{
+    width: 50%;
+    height: 70%;
+}
+
+*{
+    font-family: "Times New Roman", fantasy;
+}
+
+#menu{
+    font-size: 1.4em;
+    background-color: lightgoldenrodyellow;
+    position: fixed;
+    border: 2px solid #9c9c9c;
+    z-index: 200;
+}
+
+#calc{
+    position: static;
+}
